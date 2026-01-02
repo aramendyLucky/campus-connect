@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import AttendanceForm from '@/components/AttendanceForm';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen gradient-hero">
+      <Header />
+      
+      <main className="container max-w-6xl mx-auto px-4 py-12">
+        <HeroSection />
+        <AttendanceForm />
+        
+        {/* Footer info */}
+        <div className="text-center mt-16 text-sm text-muted-foreground">
+          <p>
+            Sistema desarrollado para control de asistencia con geofencing
+          </p>
+          <p className="mt-1">
+            50 materias disponibles • Ingeniería y Maestría
+          </p>
+        </div>
+      </main>
     </div>
   );
 };
